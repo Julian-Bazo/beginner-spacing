@@ -9,29 +9,34 @@
 
   <script>
 
-    function add7(n) {
-      return n += 7;
-    }
+    // Previous JavaScript tests
 
-    console.log(add7(13));
+    // function add7(n) {
+    //   return n += 7;
+    // }
 
-    function multiply(x, y) {
-      return (x * y);
-    }
+    // console.log(add7(13));
 
-    console.log(multiply(2,5));
+    // function multiply(x, y) {
+    //   return (x * y);
+    // }
 
-    function capitalize(lowerCase) {
-      let start = lowerCase.substring(0,1);
-      let rest = lowerCase.substring(1);
-      start = start.toUpperCase();
-      rest = rest.toLowerCase();
-      let full = (start + rest);
-      return full;
+    // console.log(multiply(2,5));
 
-    }
+    // function capitalize(lowerCase) {
+    //   let start = lowerCase.substring(0,1);
+    //   let rest = lowerCase.substring(1);
+    //   start = start.toUpperCase();
+    //   rest = rest.toLowerCase();
+    //   let full = (start + rest);
+    //   return full;
 
-    console.log(capitalize("HelLO"));
+    //}
+
+    // console.log(capitalize("HelLO"));
+
+
+    //Detects number of spaces at the end of a string
 
     function countSpace(string) {
         let length = +string.length;
@@ -42,6 +47,9 @@
           if (current === " ") {
             spaceNum++;
           }
+            else if (current !== " " && current != "") {
+              spaceNum = 0;
+            }
         }
         return spaceNum;
         console.log(spaceNum);
@@ -49,19 +57,14 @@
 
     function lastLetter(string) {
 
-      // Basic Code
+      // Detects last character
       let length = +string.length;
       let last = string.substring(length - (1 + countSpace(string)));
-      
-      // if (last === " ") {
-      //   last = string.substring(length - 2);
-      // }
-
       return last;
     }
 
     console.log(countSpace("hello  "));
-    console.log(lastLetter("last       "));
+    console.log(lastLetter("last      o u"));
 
     
 
